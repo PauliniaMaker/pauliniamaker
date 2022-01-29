@@ -1,0 +1,226 @@
+:root {
+    --logo_azul:#0590fb;
+    --logo_vermelho:#d82e44;
+    --logo_cinza:#d7d6fb;
+    --logo_escuro_0:#354a67;
+    --logo_escuro_1:#466288;
+    --logo_laranja_claro: #fdb43a;
+    --logo_laranja_escuro: #f57a21;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #1abc9c;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #1abc9c;
+    --secondary: #2c3e50;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+  }
+
+.gradient {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+
+    background: linear-gradient(45deg, #596164, #a9b7d4, #dddada, #5b6475);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+.responsive {
+    width: 100%;
+    max-width: 1134px;
+    height: auto;
+  }
+
+.hashtag {
+    width: 320px;
+    height: auto;
+}
+
+.sessao-homepage {
+    height: auto;
+    margin: 0 auto;
+}
+
+.sessao_conteudo{
+    color: var(--dark);
+    text-align: center;
+    width: 100%;
+}
+
+.aviso {
+    color: var(--logo_vermelho);
+    font-weight: bold;
+}
+
+a:link {
+    text-decoration:none;
+    color: inherit;
+  }
+  a:visited {
+    color:var(--logo_cinza);
+    text-decoration:none;
+  }
+  a:hover {
+    color:var(--logo_escuro_0);
+    text-decoration:underline;
+  }
+  a:active {
+    color:var(--logo_escuro_1);
+    text-decoration:underline;
+  }
+
+  /* MENU configuração inicial */
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    text-align: center;
+  }
+
+  div.container-menu
+  {
+      background-color: var(--logo_escuro_1);
+      font-family: Raleway;
+      color: rgb(255, 255, 0);
+      margin: 0 auto;
+      padding: 1em 2em;
+      text-align: center;
+  }
+  
+  div.container-menu a
+  {
+      color: rgb(255, 255, 0);
+      text-decoration: none;
+      font: 20px Raleway;
+      margin: 0px 10px;
+      padding: 10px 10px;
+      position: relative;
+      z-index: 0;
+      cursor: pointer;
+  }
+  
+  /* MENU */
+  div.brackets a:before, div.brackets a:after
+  {
+      color: rgb(0, 255, 255);
+      position: absolute;
+      opacity: 0;
+      font-size: 35px;
+      top: 0px;
+      transition: all 0.3s;
+  }
+  
+  div.brackets a:before
+  {
+    content: '{';
+      left: 0px;
+      transform: translateX(10px);
+  }
+  
+  div.brackets a:after
+  {
+    content: '}';
+      right: 0px;
+      transform: translateX(-10px);
+  }
+  
+  div.brackets a:hover:before, div.brackets a:hover:after
+  {
+      opacity: 1;
+      transform: translateX(0px);
+  }
+
+  /* FOOTER */
+  .container-footer {
+    background-color: var(--logo_escuro_0);
+  }
+  .fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+    text-align: center;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* LOGO */
+  .parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image2 {
+    align-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
